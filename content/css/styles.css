@@ -1,0 +1,217 @@
+:root {
+    --color1: darkblue;
+    --color2: #fff;
+    --color3: #999;
+    --color4: #666;
+    --background1: #333;
+    --background2: darkblue;
+    --background3: #ccc;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+    background-color: var(--background1);
+}
+
+ul {
+    list-style: none;
+}
+
+div h2 {
+    text-align: center;
+}
+
+
+.logo {
+    color: var(--color2);
+    z-index: 2;
+}
+
+.btn1 {
+    color: var(--color2);
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn2 {
+    border: 1px solid var(--color1);
+    padding: 2px 15px;
+    background-color: var(--background2);
+    color: var(--color2);
+    border-radius: 5px;
+    transition: .3s;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.btn2:hover {
+    background-color: var(--background1);
+    color: var(--color1);
+}
+
+.btn3 {
+    text-align: center;
+    color: var(--color1);
+    text-decoration: none;
+}
+
+.header,
+.footer {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--background2);
+    color: var(--color2);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.main {
+    width: 100%;
+    height: 80vh;
+    padding: 2rem;
+    color: var(--color1);
+    background-image: url(https://github.com/marcelo-mont/my-first-repository/blob/assets/content/images/cardano-blockchain-platform-with-smartphone.jpg);
+}
+
+.section {
+    margin: 2rem auto;
+    border: 1px solid var(--color4);
+    border-radius: 10%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 30rem;
+    height: 40vh;
+    padding: 4rem 2rem;
+    background-color: var(--background3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3rem;
+}
+
+.footer {
+    justify-content: center;
+    height: 10vh;
+}
+
+.box-form2 {
+    justify-content: center;
+    display: grid;
+}
+
+.box-item {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem 0;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+
+.form-control {
+    width: 100%;
+    border: 0;
+    background-color: var(--color2);
+    height: 3.5rem;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 1.4rem;
+}
+
+.form-btn {
+    border: 1px solid var(--color1);
+    padding: 2px 15px;
+    transition: .3s;
+    width: 100%;
+    margin: 0.8rem 0;
+    border: 0;
+    background-color: var(--background2);
+    color: var(--color2);
+    font-weight: 900;
+    font-size: 1.5rem;
+    height: 3.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    background-color: var(--background3);
+    color: var(--color1);
+}
+
+.sanduiche {
+    cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+
+.barra {
+    display: block;
+    width: 3rem;
+    height: .3rem;
+    background-color: var(--background2);
+    margin: .5rem auto;
+    border-radius: .7rem;
+    transition: .3s;
+}
+
+@media(max-width: 600px) {
+    .sanduiche {
+        display: block;
+    }
+
+    .nav-menu {
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: -90rem;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 10vh;
+        background-color: var(--background2);
+        transition: .3s;
+    }
+
+    .nav-menu li {
+        margin: 2rem 0;
+    }
+
+    .active {
+        top: 0;
+    }
+}
